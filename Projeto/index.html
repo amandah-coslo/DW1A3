@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Semáforo</title>
+    <link href="./assents/css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <!--Titulo-->
+    <div id="h1">
+        <h1>Farol</h1>
+    </div>
+    <!--fim Titulo-->
+    <!--semaforo-->
+    <div id="semaforo">
+        <div id="vermelho" class="vermelho"><h4></h4></div>
+        <div id="amarelo" class="amarelo"><h4></h4></div>
+        <div id="verde" class="verde"><h4></h4></div>
+    </div>
+    <!--fim semaforo-->
+    <!--Pedestre-->
+    <div id="semafora-pedestre">
+        <div id="pedestre" class="pedestre"></div>
+    </div>
+    <!--fim pedestre-->
+
+    <!--botões -->
+    <input type="button" class="botao" id="iniciar" onclick="startCarro()" value="Iniciar">
+
+    <script type="application/javascript">
+        // Declaração de variaveis para chamada da função
+        var vermelho = document.getElementById('vermelho');
+        var amarelo = document.getElementById('amarelo');
+        var verde = document.getElementById('verde');
+        var pedestre = document.getElementById('pedestre');
+
+        // Declaração de variável botao
+        var btnIniciar = document.getElementById('iniciar');
+
+        // Criação de variáveis
+        // Contadores 
+        let cont = 0;
+        let contAmarelo = 0;
+        let contVerde = 0;
+        let contVermelho = 0;
+        let contSemaforo = 0;
+        // Declaração de variável da função setInterval do onclick
+        var setCarro = undefined;
+
+        // Função do botão Iniciar
+        /* Na função começar é executado o farol, onde é iniciado uma variável de tempo indefinido 
+        que vai conter uma função setInterval para iniciará a contagem do farol e as mudanças de cores*/
+        var startCarro = function() {
+            // Limpar qualquer uma das outras funções que estiver rodando
+            clearInterval(setCarro);
+
+            // Criação da função setInterval
+            var setCarro = setInterval(function() {
+                // Contador vai aumentando de 1 em 1
+                cont += 1;
+                /* No if e else if contem os parametros determinados para que a condição funcione, com um contador 
+                de cada cor, limite de tempo cores adicionadas e excluidas para o funcionamento da função*/
+                // Se contador for menor ou igual a 20
+                if(cont <= 20) {
+                    // Soma mais um ao contador verde e aparece na tela
+                    contVerde += 1;
+
+                    // Acrescentar o zero no momento do contador
+                    document.getElementById('verde').innerHTML = "0" + contVerde;
+                    // Tira o zero quando o contador estiver no 10
+                    if(cont >= 10) {
+                        document.getElementById('verde').innerHTML = "" + contVerde;
+                    }
+
+                    // Adiciona a cor verde no semaforo (css -> verdeAceso)
+                    verde.classList.add('verdeAceso');
+                    
+                    // Adiciona a cor vermelha ao semaforo do pedestre (css -> pedrestre)
+                    pedestre.classList.add('pedestre');
+                // Senão se contador for maior que 20 e menor igual a 24 
+                } else if (cont > 20 && cont <= 24) {
+                    // Soma mais um ao contador amarelo e aparece na tela 
+                    contAmarelo += 1;
+                    
+                    // Apaga o contador verde                    
+                    document.getElementById('verde').innerHTML = "";
+                    // Acrescentar o zero no momento do contador
+                    document.getElementById('amarelo').innerHTML = "0" + contAmarelo;
+                              
+                    
+                    // Adiciona a cor amarela no semáforo (css -> amareloAceso)
+                    amarelo.classList.add('amareloAceso');
+                    // Remove a cor verde, adicionada no if anterior
+                    verde.classList.remove('verdeAceso');
+
+                    // Continua com a cor vermelha ao semáforo do pedestre (css -> pedrestre)        
+                    pedestre.classList.add('pedestre');
+                // Senão se contador for maior que 24 e menor que 35 
+                } else if (cont > 24 && cont < 35) {
+                    // Soma mais um ao contador vermelho e aparece na tela
+                    contVermelho += 1;
+
+                    // Acrescentar o zero no momento do contador
+                    document.getElementById('vermelho').innerHTML = "0" + contVermelho;
+                    // Apaga o contador amarelo    
+                    document.getElementById('amarelo').innerHTML = "";    
+
+                    // Adiciona a cor vermelha no semaforo (css -> vermelhoAceso)
+                    vermelho.classList.add('vermelhoAceso');
+                    // Remove a cor amarela, adicionada no if anterior
+                    amarelo.classList.remove('amareloAceso');
+                    
+                    // Remove a cor vermelha do semaforo do pedestre (css -> pedrestre) 
+                    pedestre.classList.remove('pedestre');
+                    // Adiciona a cor verde, indicando que pode atravessar (css -> pedestreAceso)
+                    pedestre.classList.add('pedestreAceso');
+                // Senão se contador for exatamente igual a 35
+                } else if (cont === 35) { 
+                    // Tira o zero quando o contador estiver no 10
+                    if(cont >= 10) {
+                        document.getElementById('vermelho').innerHTML = "0" + contVermelho;
+                        // Acrescentar o zero no momento do contador
+                    }
+                    // Apaga o contador vermelho     
+                    document.getElementById('vermelho').innerHTML = "";
+
+                    // Remove a cor vermelha, adicionada no if anterior
+                    vermelho.classList.remove('vermelhoAceso');
+                    
+                    // Remove a cor verde do semaforo do pedestre (css -> pedestreAceso)
+                    pedestre.classList.remove('pedestreAceso');
+                    // Adiciona a cor vermelha (css -> pedestre)
+                    pedestre.classList.add('pedestre');
+                // Senão zera todos os contadores e repete o processo.
+                } else {
+                    cont = 0;
+                    contAmarelo = 0;
+                    contVerde = 0;
+                    contVermelho = 0;
+                }
+            // O tempo para piscar, entre as cores e o contador é de 1 em 1 segundo
+            }, 1000);
+        }
+    </script>   
+</body>
+</html>
