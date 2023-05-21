@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    background: black;
+    -webkit-font-smoothing: antialiased;
+}
+
+input, button {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+}
+
+#preview-br {
+    background: #a73cce;
+    padding: 20px; 
+    width: 150px;
+    height: 150px;  
+}
+
+.propertie {
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 30px;
+    margin: 32px auto;
+    background: black;
+}
+
+.propertie .title-br{
+    width: 100%;
+    margin: 15px auto;
+    color: #dcdce6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.propertie .input-br{
+    width: 100%;
+    padding: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.propertie .input-br-general{
+    width: 100%;
+    max-width: 700px;
+
+    padding: 15px;
+    background: #f0f0f5;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.propertie .input-br .input-general{
+    width: 100%;
+    max-width: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.propertie .input-br .input-general input {
+    width: 50%;
+    height: 50px;
+    color: #333;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    padding: 0 24px;
+    margin: 5px 2px;
+}
+
+.propertie .br-prop{
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5px;
+}
+
+.propertie .br-prop .br-prop-items{
+    width: 100%;
+    max-width: 700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.propertie .br-prop .br-prop-items input {
+    width: 65%;
+    height: 40px;
+    color: #333;
+    border: 1px solid #757575;
+    padding: 0 24px;
+    margin: 5px 2px;
+}
+
+.propertie .br-prop .br-prop-items button {
+    width: 30%;
+    height: 40px;
+    color: #333;
+    padding: 0 24px;
+    margin: 5px 2px;
+}
+
+.propertie .br{
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 25px;
+}
+
+.propertie p {
+    color: #151515;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.propertie p span {
+    color: #005b00;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#btn-copy:active {
+    color: black;
+    background-color: #a73cce;
+}
+
+.propertie .input-br .input-position {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+    justify-content: space-between;
+}
