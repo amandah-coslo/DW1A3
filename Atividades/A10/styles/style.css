@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  background: black;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  text-align: center;
+  color: #c58dda;
+}
+
+p {
+  text-align: center;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  margin-top: 25px;
+  font-weight: 100;
+}
+
+.general-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.general-container input[type="text"],
+.general-container input[type="email"],
+.general-container input[type="tel"],
+.general-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  transition: border-color 0.3s ease-in-out;
+  color: #9962ac;
+}
+
+.general-container input[type="submit"] {
+  background-color: #b75ad9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 25px;
+  margin-left: 45%;
+}
+
+.general-container input[type="submit"]:hover {
+  color: white;
+  background-color: #c58dda;
+}
+
+.general-container input[type="submit"]:active {
+  color: white;
+  background-color: #a73cce;
+}
+
+.general-container input.invalid-field {
+  border-color: red;
+}
+
+.general-container .input-hint {
+  font-size: 12px;
+  color: gray;
+}

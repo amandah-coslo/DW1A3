@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html  lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/style.css" type="text/css" rel="stylesheet">
+    <title>Atividades DW1A3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+  <div class="general-container">
+    <h1>Formulário</h1>
+    <p>Preencha o formulário de acordo com o solicitado!</p>
+    <form onsubmit="return validacaoCampos()">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" required
+        placeholder="email@email.com"
+        style="font-family: Poppins, sans-serif"
+        onfocus="instrucao('email', 'Endereço de e-mail válido.')"
+        onblur="rinstrucao('email')"><br>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" required
+        placeholder="********"
+        style="font-family: Poppins, sans-serif"
+        onfocus="instrucao('senha', 'Letras, números e caracteres especiais.')"
+        onblur="rinstrucao('senha')"><br>
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" required
+        style="font-family: Poppins, sans-serif"
+        onfocus="instrucao('nome', 'Digite seu nome.')"
+        onblur="rinstrucao('nome')"><br>
+
+      <label for="sobrenome">Sobrenome:</label>
+      <input type="text" id="sobrenome" required
+        style="font-family: Poppins, sans-serif"
+        onfocus="instrucao('sobrenome', 'Digite seu sobrenome.')"
+        onblur="rinstrucao('sobrenome')"><br>
+
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required
+        placeholder="000.000.000-00"
+        style="font-family: Poppins, sans-serif"
+        onfocus="instrucao('cpf', 'Digite seu CPF.')"
+        onblur="rinstrucao('cpf')"><br>
+
+      <label for="celular">Celular:</label>
+      <input type="tel" id="celular" pattern="\(\d{2}\) \d{4,5}-\d{4}" required
+        placeholder="(00) 00000-0000"
+        style="font-family: Poppins, sans-serif"
+        onfocus="instrucao('celular', 'Digite seu DDD + número')"
+        onblur="rinstrucao('celular')"><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+    
+  <script src="script.js"></script>
+</body>
+</html>
