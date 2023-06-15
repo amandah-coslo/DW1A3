@@ -35,8 +35,38 @@ h2 {
     text-align: center;
     width: 20%;
     height: 20%;
-    margin-top: -460px;
+    margin-top: -480px;
     margin-left: 35px;
+}
+
+#links_a {
+    margin-top: -50px;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    padding: 0;
+    margin-right: auto;
+    margin: 0%;
+    text-align: center;
+    width: 20%;
+    height: 20%;
+    margin-top: -400px;
+    margin-left: 50px;
+}
+
+#verm {
+    color: red;
+}
+
+#amar {
+    color: yellow;
+}
+
+#verd {
+    color: green;
 }
 
 input[type="checkbox"] {
@@ -264,10 +294,14 @@ input[type="checkbox"]:checked ~ * {
         text-align: center;
         width: 20%;
         height: 20%;
-        margin-top: -480px;
-        margin-left: 35px;
+        margin-top: -500px;
+        margin-left: 50px;
     }
-    
+
+    #links_a {
+        margin-top: -50px;
+    }
+
     input[type="checkbox"] {
         position: fixed;
         z-index: 1;
@@ -342,8 +376,12 @@ input[type="checkbox"]:checked ~ * {
         text-align: center;
         width: 20%;
         height: 20%;
-        margin-top: -490px;
-        margin-left: 35px;
+        margin-top: -500px;
+        margin-left: 55px;
+    }
+        
+    #links_a {
+        margin-top: -50px;
     }
     
     input[type="checkbox"] {
@@ -423,8 +461,13 @@ input[type="checkbox"]:checked ~ * {
         text-align: center;
         width: 20%;
         height: 20%;
-        margin-top: -490px;
+        margin-top: -500px;
         margin-left: 35px;
+    }
+        
+    #links_a {
+        margin-top: 0px;
+        margin-left: 18%;
     }
     
     input[type="checkbox"] {
@@ -504,7 +547,7 @@ input[type="checkbox"]:checked ~ * {
         text-align: center;
         width: 20%;
         height: 20%;
-        margin-top: -490px;
+        margin-top: -480px;
         margin-left: 35px;
     }
     
@@ -521,6 +564,11 @@ input[type="checkbox"]:checked ~ * {
         height: 10%;
         margin: 2% auto;
         border-radius: 10px;
+    }
+        
+    #links_a {
+        margin-top: 0px;
+        margin-left: 18%;
     }
     
     input[type="checkbox"]::before {
@@ -585,15 +633,20 @@ input[type="checkbox"]:checked ~ * {
         text-align: center;
         width: 20%;
         height: 20%;
-        margin-top: -490px;
-        margin-left: 35px;
+        margin-top: -480px;
+        margin-left: 10px;
+    }
+        
+    #links_a {
+        margin-top: 0px;
+        margin-left: 18%;
     }
     
     input[type="checkbox"] {
         position: fixed;
         z-index: 1;
         top: 160px;
-        left: 100px;
+        left: 45px;
         cursor: pointer;
         font-size: 16px;
         font-weight: 600;
@@ -628,7 +681,7 @@ input[type="checkbox"]:checked ~ * {
         position: fixed;
         z-index: 1;
         top: 40px;
-        left: 100px;
+        left: 45px;
         cursor: pointer;
         color: rgb(240, 246, 241);
         font-size: 16px;
