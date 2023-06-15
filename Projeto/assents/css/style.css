@@ -11,14 +11,66 @@ body, html {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: black;
 }
 
-.container {
-    width: 90%;
-    max-width: 600px;
+h1 {
+    font-size: 36px;
     margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    margin: auto; 
+    color: white;
+}
+
+h2 {
+    color: gray;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    padding: 0;
+    margin-right: auto;
+    margin: 0%;
+    text-align: center;
+    width: 20%;
+    height: 20%;
+    margin-top: -460px;
+    margin-left: 35px;
+}
+
+input[type="checkbox"] {
+    position: fixed;
+    z-index: 1;
+    top: 160px;
+    left: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid white;
+    width: 10%;
+    height: 10%;
+    margin: 2% auto;
+    border-radius: 10px;
+}
+
+input[type="checkbox"]::before {
+    color: white;
+    background: black;
+    padding: 10px 20px;
+    border: 2px solid white;
+}
+
+input[type="checkbox"]:checked:before {
+    color: black;
+    background: white;
+    border: 2px solid black;
+    padding: 10px 20px;
+    margin: 50px;
+}
+
+input[type="checkbox"]:checked ~ * {
+    filter: invert(1);
 }
 
 /*semaforo*/
@@ -36,7 +88,8 @@ body, html {
 .vermelho {
     background-color: gray;
     border-radius: 50%;
-    width: 30%;
+    width: 100px;
+    height: 100px;
     padding-top: 30%;
     margin: 5% auto;
     justify-content: center;
@@ -53,7 +106,8 @@ body, html {
     background-color: red;
     box-shadow: 0 0 20px 10px white;
     border-radius: 50%;
-    width: 30%;
+    width: 100px;
+    height: 100px;
     padding-top: 30%;
     margin: 9% auto;
     color: red;
@@ -63,7 +117,8 @@ body, html {
 .amarelo {
     background-color: gray;
     border-radius: 50%;
-    width: 30%;
+    width: 100px;
+    height: 100px;
     padding-top: 30%;
     margin: 7% auto;
     justify-content: center;
@@ -80,7 +135,8 @@ body, html {
     background-color: yellow;
     box-shadow: 0 0 20px 10px white;
     border-radius: 50%;
-    width: 30%;
+    width: 100px;
+    height: 100px;
     padding-top: 30%;
     margin: 9% auto;
     color: yellow;
@@ -90,7 +146,8 @@ body, html {
 .verde {
     background-color: gray;
     border-radius: 50%;
-    width: 30%;
+    width: 100px;
+    height: 100px;
     padding-top: 30%;
     margin: 9% auto;
     justify-content: center;
@@ -107,7 +164,8 @@ body, html {
     background-color: green;
     box-shadow: 0 0 20px 10px white;
     border-radius: 50%;
-    width: 30%;
+    width: 100px;
+    height: 100px;
     padding-top: 30%;
     margin: 9% auto;
     color: green;
@@ -115,30 +173,39 @@ body, html {
 
 /*botões*/
 .botao {
-    margin: 2% auto;
-    color: rgb(240, 246, 241);
-    width: 15%;
-    height: 15%;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 10px;
+    position: fixed;
+    z-index: 1;
+    top: 40px;
+    left: 100px;
+    cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    display: grid;
-    background-color: darkgreen;
+    background-color: gray;
+    border: 2px solid white;
+    margin: 2% auto;
+    color: rgb(240, 246, 241);
+    width: 10%;
+    height: 10%;
+    border-radius: 10px;
 }
 
 .botao:hover{
-    background-color:  rgb(246, 221, 32);
+    background-color: rgb(6, 211, 6);
     color: white;
     border: 2px solid white;
 }
 
 .botao:active{
-    background-color:  rgb(191, 10, 10);
+    background-color:  darkgreen;
     color: white;
     border: 2px solid white;
  }
+
+.botao:focus{
+    background-color:  darkgreen;
+    color: white;
+    border: 2px solid white;
+} 
 
 /*semaforo - pedestre*/
 #semafora-pedestre {
@@ -156,9 +223,10 @@ body, html {
     background-color: red;
     box-shadow: 0 0 20px 10px white;
     border-radius: 50%;
-	width: 30%;
-    padding-top: 30%;
-    margin: 20% auto;
+	width: 100px;
+    height: 100px;
+    margin: 9% auto;
+    color: red;
 }
 
 /*semaforo - pedestre aceso*/
@@ -166,7 +234,8 @@ body, html {
     background-color: green;
     box-shadow: 0 0 20px 10px white;
     border-radius: 50%;
-    width: 30%;
+    width: 100px;
+    height: 100px;
     padding-top: 30%;
     margin: 9% auto;
     color: green;
@@ -179,9 +248,75 @@ body, html {
     .verde,
     .pedestre,  
     .pedestreAceso {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         margin: 10% auto;
+    }
+
+    h2 {
+        color: gray;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        padding: 0;
+        margin-right: auto;
+        margin: 0%;
+        text-align: center;
+        width: 20%;
+        height: 20%;
+        margin-top: -480px;
+        margin-left: 35px;
+    }
+    
+    input[type="checkbox"] {
+        position: fixed;
+        z-index: 1;
+        top: 160px;
+        left: 100px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        border: 2px solid white;
+        width: 10%;
+        height: 10%;
+        margin: 2% auto;
+        border-radius: 10px;
+    }
+    
+    input[type="checkbox"]::before {
+        color: white;
+        background: black;
+        padding: 10px 20px;
+        border: 2px solid white;
+    }
+    
+    input[type="checkbox"]:checked:before {
+        color: black;
+        background: white;
+        border: 2px solid black;
+        padding: 10px 20px;
+        margin: 50px;
+    }
+    
+    input[type="checkbox"]:checked ~ * {
+        filter: invert(1);
+    }
+
+    .botao {
+        background-color: gray;
+        position: fixed;
+        z-index: 1;
+        top: 40px;
+        left: 100px;
+        cursor: pointer;
+        color: rgb(240, 246, 241);
+        font-size: 16px;
+        font-weight: 600;
+        border: 2px solid white;
+        width: 10%;
+        height: 10%;
+        margin: 2% auto;
+        border-radius: 10px;
     }
 }
 
@@ -191,9 +326,75 @@ body, html {
     .verde,
     .pedestre, 
     .pedestreAceso {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         margin: 10% auto;
+    }
+
+    h2 {
+        color: gray;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        padding: 0;
+        margin-right: auto;
+        margin: 0%;
+        text-align: center;
+        width: 20%;
+        height: 20%;
+        margin-top: -490px;
+        margin-left: 35px;
+    }
+    
+    input[type="checkbox"] {
+        position: fixed;
+        z-index: 1;
+        top: 160px;
+        left: 100px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        border: 2px solid white;
+        width: 10%;
+        height: 10%;
+        margin: 2% auto;
+        border-radius: 10px;
+    }
+    
+    input[type="checkbox"]::before {
+        color: white;
+        background: black;
+        padding: 10px 20px;
+        border: 2px solid white;
+    }
+    
+    input[type="checkbox"]:checked:before {
+        color: black;
+        background: white;
+        border: 2px solid black;
+        padding: 10px 20px;
+        margin: 50px;
+    }
+    
+    input[type="checkbox"]:checked ~ * {
+        filter: invert(1);
+    }
+
+    .botao {
+        background-color: gray;
+        position: fixed;
+        z-index: 1;
+        top: 40px;
+        left: 100px;
+        cursor: pointer;
+        color: rgb(240, 246, 241);
+        font-size: 16px;
+        font-weight: 600;
+        border: 2px solid white;
+        width: 10%;
+        height: 10%;
+        margin: 2% auto;
+        border-radius: 10px;
     }
 }
 
@@ -206,9 +407,75 @@ body, html {
     .verdeAceso,
     .pedestre,
     .pedestreAceso {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         margin: 10% auto;
+    }
+
+    h2 {
+        color: gray;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        padding: 0;
+        margin-right: auto;
+        margin: 0%;
+        text-align: center;
+        width: 20%;
+        height: 20%;
+        margin-top: -490px;
+        margin-left: 35px;
+    }
+    
+    input[type="checkbox"] {
+        position: fixed;
+        z-index: 1;
+        top: 160px;
+        left: 100px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        border: 2px solid white;
+        width: 10%;
+        height: 10%;
+        margin: 2% auto;
+        border-radius: 10px;
+    }
+    
+    input[type="checkbox"]::before {
+        color: white;
+        background: black;
+        padding: 10px 20px;
+        border: 2px solid white;
+    }
+    
+    input[type="checkbox"]:checked:before {
+        color: black;
+        background: white;
+        border: 2px solid black;
+        padding: 10px 20px;
+        margin: 50px;
+    }
+    
+    input[type="checkbox"]:checked ~ * {
+        filter: invert(1);
+    }
+
+    .botao {
+        background-color: gray;
+        position: fixed;
+        z-index: 1;
+        top: 40px;
+        left: 100px;
+        cursor: pointer;
+        color: rgb(240, 246, 241);
+        font-size: 16px;
+        font-weight: 600;
+        border: 2px solid white;
+        width: 10%;
+        height: 10%;
+        margin: 2% auto;
+        border-radius: 10px;
     }
 }
 
@@ -221,9 +488,75 @@ body, html {
     .verdeAceso,
     .pedestre,
     .pedestreAceso {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         margin: 10% auto;
+    }
+
+    h2 {
+        color: gray;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        padding: 0;
+        margin-right: auto;
+        margin: 0%;
+        text-align: center;
+        width: 20%;
+        height: 20%;
+        margin-top: -490px;
+        margin-left: 35px;
+    }
+    
+    input[type="checkbox"] {
+        position: fixed;
+        z-index: 1;
+        top: 160px;
+        left: 100px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        border: 2px solid white;
+        width: 10%;
+        height: 10%;
+        margin: 2% auto;
+        border-radius: 10px;
+    }
+    
+    input[type="checkbox"]::before {
+        color: white;
+        background: black;
+        padding: 10px 20px;
+        border: 2px solid white;
+    }
+    
+    input[type="checkbox"]:checked:before {
+        color: black;
+        background: white;
+        border: 2px solid black;
+        padding: 10px 20px;
+        margin: 50px;
+    }
+    
+    input[type="checkbox"]:checked ~ * {
+        filter: invert(1);
+    }
+
+    .botao {
+        background-color: gray;
+        position: fixed;
+        z-index: 1;
+        top: 40px;
+        left: 100px;
+        cursor: pointer;
+        color: rgb(240, 246, 241);
+        font-size: 16px;
+        font-weight: 600;
+        border: 2px solid white;
+        width: 10%;
+        height: 10%;
+        margin: 2% auto;
+        border-radius: 10px;
     }
 }
 
@@ -236,39 +569,74 @@ body, html {
     .verdeAceso,
     .pedestre,
     .pedestreAceso {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         margin: 10% auto;
     }
-}
 
-@media (max-width: 500px) {
-    .vermelho,
-    .vermelhoAceso,
-    .amarelo,
-    .amareloAceso
-    .verde,
-    .verdeAceso,
-    .pedestre,
-    .pedestreAceso {
-        width: 80px;
-        height: 80px;
-        margin: 15% auto;
-        font-size: 16px;
+    h2 {
+        color: gray;
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        padding: 0;
+        margin-right: auto;
+        margin: 0%;
+        text-align: center;
+        width: 20%;
+        height: 20%;
+        margin-top: -490px;
+        margin-left: 35px;
     }
-}
+    
+    input[type="checkbox"] {
+        position: fixed;
+        z-index: 1;
+        top: 160px;
+        left: 100px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600;
+        border: 2px solid white;
+        width: 10%;
+        height: 10%;
+        margin: 2% auto;
+        border-radius: 10px;
+    }
+    
+    input[type="checkbox"]::before {
+        color: white;
+        background: black;
+        padding: 10px 20px;
+        border: 2px solid white;
+    }
+    
+    input[type="checkbox"]:checked:before {
+        color: black;
+        background: white;
+        border: 2px solid black;
+        padding: 10px 20px;
+        margin: 50px;
+    }
+    
+    input[type="checkbox"]:checked ~ * {
+        filter: invert(1);
+    }
 
-@media (max-width: 375px) {
-    .vermelho,
-    .vermelhoAceso,
-    .amarelo,
-    .amareloAceso
-    .verde,
-    .verdeAceso,
-    .pedestre,
-    .pedestreAceso {
-        width: 80px;
-        height: 80px;
-        margin: 15% auto;
+    .botao {
+        background-color: gray;
+        position: fixed;
+        z-index: 1;
+        top: 40px;
+        left: 100px;
+        cursor: pointer;
+        color: rgb(240, 246, 241);
+        font-size: 16px;
+        font-weight: 600;
+        border: 2px solid white;
+        width: 10%;
+        height: 10%;
+        margin: 2% auto;
+        border-radius: 10px;
     }
 }
