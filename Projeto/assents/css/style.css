@@ -39,7 +39,7 @@ h2 {
     margin-left: 35px;
 }
 
-#links_a {
+#links {
     margin-top: -50px;
 }
 
@@ -298,7 +298,7 @@ input[type="checkbox"]:checked ~ * {
         margin-left: 50px;
     }
 
-    #links_a {
+    #links {
         margin-top: -50px;
     }
 
@@ -380,7 +380,7 @@ input[type="checkbox"]:checked ~ * {
         margin-left: 55px;
     }
         
-    #links_a {
+    #links {
         margin-top: -50px;
     }
     
@@ -465,7 +465,7 @@ input[type="checkbox"]:checked ~ * {
         margin-left: 35px;
     }
         
-    #links_a {
+    #links {
         margin-top: 0px;
         margin-left: 18%;
     }
@@ -566,7 +566,7 @@ input[type="checkbox"]:checked ~ * {
         border-radius: 10px;
     }
         
-    #links_a {
+    #links {
         margin-top: 0px;
         margin-left: 18%;
     }
@@ -637,7 +637,7 @@ input[type="checkbox"]:checked ~ * {
         margin-left: 10px;
     }
         
-    #links_a {
+    #links {
         margin-top: 0px;
         margin-left: 18%;
     }
